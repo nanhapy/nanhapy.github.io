@@ -56,6 +56,9 @@ todos: [
 ```
 
 ## State is read-only ##
+
 ### The only way to change the state is to emit an action, **an object describing what happened.** ###
+
 no one can change state directly. Instead, they express an intent to transform the state
+
 ## Changes are made with pure functions 
