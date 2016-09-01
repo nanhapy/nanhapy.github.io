@@ -29,27 +29,32 @@ At last,there are two concepts: **Mutation and Asynchronicity**.To fix them, Rea
 And Redux attempts to make state mutations predictable by controlling how and when updates happen.These restrictions are reflected in the three principles of Redux.
 
 # Three principles #
+
 ## Single source of truth
+
 ### The state of your whole application is stored in an object tree with a single store
 Single : easy serialized, easy debug or introspect, _persist app's state in development?
-        
-        console.log(store.getState())
 
-        /* Prints
-        {
-        visibilityFilter: 'SHOW_ALL',
-        todos: [
-            {
-            text: 'Consider using Redux',
-            completed: true,
-            },
-            {
-            text: 'Keep all state in a single tree',
-            completed: false
-            }
-        ]
-        }
-        */
+```javascript
+console.log(store.getState())
+
+/* Prints
+{
+visibilityFilter: 'SHOW_ALL',
+todos: [
+    {
+    text: 'Consider using Redux',
+    completed: true,
+    },
+    {
+    text: 'Keep all state in a single tree',
+    completed: false
+    }
+]
+}
+*/
+```
+
 ## State is read-only ##
 ### The only way to change the state is to emit an action, **an object describing what happened.** ###
 no one can change state directly. Instead, they express an intent to transform the state
