@@ -23,3 +23,87 @@ Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most ou
 [jekyll-docs]: http://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll
 [jekyll-talk]: https://talk.jekyllrb.com/
+
+
+Hello Markdown in VS Code!
+====================
+
+This is a simple introduction to compiling Markdown in VS Code.
+
+Things you'll need:
+
+* [node](https://nodejs.org)
+* [marked](https://www.npmjs.com/package/marked)
+* [tasks.json](/docs/editor/tasks)
+
+## Section Title
+
+> This block quote is here for your information.
+
+> This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
+
+> This is the first level of quoting.
+>
+> > This is nested blockquote.
+>
+> Back to the first level.
+
+> ## This is a header.
+> 
+> 1.   This is the first list item.
+> 2.   This is the second list item.
+> 
+> Here's some example code:
+> 
+>       return shell_exec("echo $input | $markdown_script");
+
+*   111
++   aaa
+1.  `3333
+3.  222
+
+3.  3333
+
+    333
+    
+33333
+4.  4444
+*   Lorem ipsum dolor sit amet, consectetuer adipiscing elit.    
+        
+        let v = {};
+    > Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,
+    viverra nec, fringilla in, laoreet vitae, risus.
+*   Donec sit amet nisl. Aliquam semper ipsum sit amet velit.
+    Suspendisse id sem consectetuer libero luctus adipiscing.
+*   Bird
+*   Magic
+*   >       let v = {};
+    >        function() {
+    >
+    >    }
+    
+122222222
+dddddddd
+
+    let
+____
+
+This is [an example][2] inline link.
+
+[2]: http://example.com/  "Optional Title Here"
+
+*single asterisks*
+
+_single underscores_
+
+**double asterisks**
+
+__double underscores__
+
+un*frigging*believable
+
+``There is a literal backtick (`) here.``
+
+Use the `printf()` function.

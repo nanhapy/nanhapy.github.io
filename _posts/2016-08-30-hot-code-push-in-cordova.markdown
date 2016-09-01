@@ -108,3 +108,30 @@ categories: programming hybird-mobile
     ```sh
     ionic build -- chcp-dev
     ```
+
+9.  打测试包步骤
+
+    1.  修改代码
+    2.  执行`cordova-hcp build`
+    3.  修改`chcp.josn`中的`content_url`为开发环境url
+    4.  执行`ionic build --chcp-dev`
+        
+        >最好先将安装包放到外网链接或者app store上
+       
+        >如果不需打包，直接进行下一步
+
+    5.  复制`www`到开发环境服务器目录
+
+
+10. 打release包步骤
+
+    1.  修改代码
+    2.  执行`cordova-hcp build`
+    3.  修改`chcp.josn`中的`content_url`为生产环境url
+    4.  执行`ionic build --release`
+      
+        >最好先将安装包放到外网链接或者app store上
+       
+        >如果不需打包，直接进行下一步
+
+    5.  复制`www`到生产环境服务器目录
