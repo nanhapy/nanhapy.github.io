@@ -135,3 +135,44 @@ categories: programming hybird-mobile
         >如果不需打包，直接进行下一步
 
     5.  复制`www`到生产环境服务器目录
+
+11. 配置外部服务器为qiniu
+
+    1.  注册qiniu
+    2.  新建bucket,命名为`iems-hcp`
+    3.  获取`AccessKey`和`SecretKey`
+    4.  安装qiniu客户端控制台程序[qshell](http://developer.qiniu.com/code/v6/tool/qshell.html),帮助文档见[github](https://github.com/qiniu/qshell/wiki/qshell%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C)
+    5.  将`qshell.exe`添加到环境变量
+    6.  管理员CLI,进入ionic根目录
+    7.  登录qiniu用户
+
+        ```sh
+        qshell account <Your AccessKey> <Your SecretKey>
+        ```
+  
+    8.  输入命令，查看是否登入成功
+
+        ```sh
+        qshell account
+        ```
+ 
+    9.  ionic根目录新建文件，命名为`qs_config.json`,根据[upload配置文件说明](https://github.com/qiniu/qshell/wiki/qupload#%E9%85%8D%E7%BD%AE)建立配置文件，如下
+
+        ```json
+        {
+            "src_dir"       :   "<Your sync dir>",
+            "access_key"    :   "<Your AccessKey>",
+            "secret_key"    :   "<Your SecretKey>",
+            "bucket"        :   "<Your Bucket Name>",
+            "key_prefix"    :   "www/",
+            "overwrite"     :   true,
+            "check_exists"  :   true,
+            "check_hash"    :   true
+        }
+        ```
+
+    10. 输入命令，同步文件到qiniu,可实现增量更新，但是删除本地文件，似乎不能同步删除服务器文件。
+
+        ```sh
+        qshell qupload 20 qsconfig.json
+        ```
