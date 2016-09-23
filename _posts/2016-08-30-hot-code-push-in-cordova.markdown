@@ -176,7 +176,7 @@ categories: programming hybird-mobile
     10. 输入命令，同步文件到qiniu,可实现增量更新，但是删除本地文件，似乎不能同步删除服务器文件。
 
         ```sh
-        qshell qupload 20 qsconfig.json
+        qshell qupload 20 qs_config.json
         ```
 
 12. 开发环境
