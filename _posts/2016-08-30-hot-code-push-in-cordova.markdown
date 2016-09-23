@@ -114,6 +114,7 @@ categories: programming hybird-mobile
     1.  修改代码
     2.  执行`cordova-hcp build`
     3.  修改`chcp.josn`中的`content_url`为开发环境url
+    4.  检查`config.xml`中的`config_url`和`native-interface version`
     4.  执行`ionic build --chcp-dev`
         
         >最好先将安装包放到外网链接或者app store上
@@ -127,7 +128,8 @@ categories: programming hybird-mobile
 
     1.  修改代码
     2.  执行`cordova-hcp build`
-    3.  修改`chcp.josn`中的`content_url`为生产环境url
+    3.  修改`chcp.josn`中的`content_url`为生产环境url;
+    4.  检查`config.xml`中的`config_url`和`native-interface version`
     4.  执行`ionic build --release`
       
         >最好先将安装包放到外网链接或者app store上
@@ -175,4 +177,22 @@ categories: programming hybird-mobile
 
         ```sh
         qshell qupload 20 qsconfig.json
+        ```
+
+12. 开发环境
+
+    1.  注释掉`cordova-hcp.json`中的`content_url`
+
+    2.  执行命令
+
+        ```sh
+        cordova-hcp server
+        ```
+
+    3.  `config.xml`中的`config_url`为`.chcpenv`中的`config_url`
+
+    4.  执行命令
+
+        ```sh
+        ionic build
         ```

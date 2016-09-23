@@ -5,6 +5,9 @@ date:   2016-08-23 11:25:49 +0800
 categories: programming javascript react
 ---
 
+* TOC
+{:toc}
+
 # Motivation #
 For sinle-page-applications:
 
