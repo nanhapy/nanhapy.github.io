@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "power shell cmdlet"
+title:  "PowerShell cmdlet"
 date:   2016-11-14 15:01:00 +0800
 categories: programming C# EF
 ---
