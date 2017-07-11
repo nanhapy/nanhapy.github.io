@@ -61,7 +61,6 @@ categories: system linux
         # Unknown command. Try cap, list, nodes, config, fetch, version or quit
         ```
 
+    2.  munin.conf
 
-    2.  munin.conf
-    
         lalalal
