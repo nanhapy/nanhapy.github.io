@@ -11,6 +11,7 @@ categories: tools
 |`git push <remote-name> :<branch-name>`|git delete remote branch|
 |`git reset HEAD <file>`|unstage|
 |`git checkout -- <file>`|discard changes in working directory|
+|`git reset HEAD~ `|undo a commit|
 
 为了更加形象地说明，我们假设现在有一个工作目录，里面包含了三个将要被暂存和提交的文件。 
     
