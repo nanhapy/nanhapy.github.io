@@ -12,7 +12,7 @@ categories: tools
 |`git reset HEAD <file>`|unstage|
 |`git checkout -- <file>`|discard changes in working directory|
 |`git reset HEAD~ `|undo a commit|
-
+|`git fetch origin git`<br>`reset --hard origin/master`|setting your branch to exactly match the remote branch|
 为了更加形象地说明，我们假设现在有一个工作目录，里面包含了三个将要被暂存和提交的文件。 
     
     root
